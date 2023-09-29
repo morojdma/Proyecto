@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu responsivo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <nav class="navbar container">
+      <div class="mobile">
+        <div class="header">
+          <div class="more">
+            <button id="bMore">
+              <span class="fa-solid fa-bars"></span>
+            </button>
+          </div>
+        </div>
+        <div id="links" class="links ">
+          <li><a href="#">Inicio</a></li>
+						<li><a href="#">Servicios</a></li>
+						<li><a href="#">Productos</a></li>
+						<li><a href="#">Quienes somos</a></li>
+						<li><a href="/contactanos/index.html">Contacto</a></li>
+						<li><a href="#">Blog</a></li>
+        </div>
+        
+      </div>
+      
+      <div class="desktop">
+
+        <div class="menu secondary full">
+          <a href="#">Inicio</a>
+						<a href="#">Servicios</a>
+						<a href="#">Productos</a>
+						<a href="#">Quienes somos</a>
+						<a href="/contactanos/index.html">Contacto</a>
+						<a href="#">Blog</a>
+        </div>
+        <div class="secondary mini">
+          <a href="#" class="more" >More</a>
+          <div class="submenu">
+            <li><a href="#">Inicio</a></li>
+						<li><a href="#">Servicios</a></li>
+						<li><a href="#">Productos</a></li>
+						<li><a href="#">Quienes somos</a></li>
+						<li><a href="/contactanos/index.html">Contacto</a></li>
+						<li><a href="#">Blog</a></li>
+          </div>
+        </div>
+      </div>
+      <form class="search-form">
+        <input type="search" placeholder="Buscar..." />
+        <button class="btn-search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+
+    </nav>
+    <script>
+      const bMore = document.querySelector('#bMore');
+      const links = document.querySelector('#links');
+
+      bMore.addEventListener('click',(e)=>{
+        links.classList.toggle('collapsed')
+      })
+
+    </script>
+    <script
+    src="https://kit.fontawesome.com/81581fb069.js"
+    crossorigin="anonymous"
+  ></script>
+  </body>
+</html>
