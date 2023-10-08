@@ -444,7 +444,7 @@ html {
 	text-transform:uppercase;
 	position: relative;
 	text-align: center;
-	margin: 1rem 2rem;
+	
 }
 
 .card-category p::after {
@@ -676,6 +676,41 @@ html {
 	grid-template-columns: repeat(3, 1fr);
 	gap: 3rem;
 }
+.blog-category {
+	height: 250px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 2rem;
+	gap: 2rem;
+}
+
+.container-img1 {
+	background-image: linear-gradient(#00000080, #00000080),
+		url('img/blog-1.jpg');
+	background-size: cover;
+	background-position: top;
+	background-repeat: no-repeat;
+}
+
+.container-img2 {
+	background-image: linear-gradient(#00000080, #00000080),
+		url('img/blog-2.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.container-img3 {
+	background-image: linear-gradient(#00000080, #00000080),
+		url('img/blog-3.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+
 
 .card-blog {
 	display: flex;
@@ -683,7 +718,7 @@ html {
 	gap: 2rem;
 }
 
-.card-blog .container-img {
+.card-blog .blog-category  {
 	border-radius: 2rem;
 	cursor: pointer;
 	position: relative;
@@ -1070,10 +1105,17 @@ html {
 	}
 
 	.container-blogs {
-		overflow: hidden;
-		grid-template-columns: 1fr 1fr;
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		margin: 0 40px;
+	}
 
-		height: 52rem;
+	.container-img2 {
+		margin-top: -30px;
+	}
+
+	.container-img3 {
+		margin-top: -30px;
 	}
 
 	.menu-footer {
@@ -1127,6 +1169,20 @@ html {
 		
 	  }
 
+	  .search-form{
+		width: 170px;
+	  }
+
+	  .search-form input {
+		width: 139px;
+		
+	}
+
+	  .container-categories {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		gap: 3rem;
+	}
 	 
 
 	  nav .mobile .links a {
@@ -1217,9 +1273,21 @@ html {
 		padding: 2rem;
 	}
 
+	.blog-category {
+		height: 150px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		border-radius: 2rem;
+		
+	}
+
+
 	.container-blogs {
-		grid-template-columns: 1fr;
-		height: 75rem;
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		margin: 0 20px;
 	}
 
 	.content-blog h3 {
